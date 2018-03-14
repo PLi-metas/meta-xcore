@@ -39,7 +39,6 @@ IMAGE_ROOTFS_SIZE ?= "294912"
 
 IMAGE_CMD_xcore-emmc_append = "\
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
-    cp ${DEPLOY_DIR_IMAGE}/splash.bin ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/splash.bin; \
     mv ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.emmc ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/emmc.img; \
     cd ${IMAGE_ROOTFS}; \
     tar -cvf ${DEPLOY_DIR_IMAGE}/rootfs.tar -C ${IMAGE_ROOTFS} .; \
