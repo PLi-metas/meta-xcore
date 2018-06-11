@@ -4,6 +4,8 @@ LICENSE = "GPLv2"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 SRC = "20170501"
 
+COMPATIBLE_MACHINE = "(spycat4k|spycat4kcombo|spycat4kmini)"
+
 KERNEL_RELEASE = "4.11"
 
 inherit kernel machine_kernel_pr
