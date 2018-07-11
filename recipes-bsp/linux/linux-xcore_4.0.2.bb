@@ -2,6 +2,8 @@ SUMMARY = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 COMPATIBLE_MACHINE = "(bcm7358|vp7358ci)"
 
 inherit kernel machine_kernel_pr
