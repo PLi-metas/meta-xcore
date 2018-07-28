@@ -24,11 +24,11 @@ GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
 require conf/machine/include/xcore-oem.inc
 
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += " \
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
     kernel-module-hci-uart \
     "
 
-MACHINE_EXTRA_RRECOMMENDS += " \
+MACHINE_EXTRA_RRECOMMENDS += "\
     firmware-rtl8723b \
     "
 
@@ -62,7 +62,7 @@ UBI_VOLNAME = "rootfs"
 MKUBIFS_ARGS = "-m 4096 -e 1040384 -c 2048 -F"
 UBINIZE_ARGS = "-m 4096 -p 1024KiB"
 
-IMAGE_CMD_ubi_prepend = " \
+IMAGE_CMD_ubi_prepend = "\
     rm -rf ${IMAGE_ROOTFS}/boot/*; \
     rm -rf ${IMAGE_ROOTFS}/tmp/*; \
     "
