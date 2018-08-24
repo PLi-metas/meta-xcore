@@ -15,7 +15,7 @@ KERNEL_MODULE_AUTOLOAD += "hci_uart"
 
 IMAGE_FSTYPES ?= "${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'xcore-emmc', 'ubi', d)}"
 
-MACHINE_FEATURES += "videoenhancement inibt directfb textlcd dvb-c skins1080 blindscan-tbs linuxwifi linux4extra ci mountboot"
+MACHINE_FEATURES += "videoenhancement inibt directfb textlcd dvb-c blindscan-tbs linuxwifi linux4extra ci mountboot"
 
 KERNEL_IMAGETYPE = "zImage"
 KERNEL_CONSOLE = "ttyS0,115200n8"
