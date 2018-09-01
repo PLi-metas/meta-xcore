@@ -19,8 +19,6 @@ require conf/machine/include/soc-family.inc
 
 PREFERRED_VERSION_linux-xcore = "4.0.2"
 
-require conf/machine/include/xcore-mipsel.inc
-
 MACHINE_FEATURES += "ci textlcd videoenhancement blindscan-dvbs singlecore no-cl-svr 7segment"
 
 IMAGE_FSTYPES ?= "ubi"
