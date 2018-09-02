@@ -19,7 +19,8 @@ require conf/machine/include/soc-family.inc
 
 PREFERRED_VERSION_linux-xcore = "4.0.2"
 
-MACHINE_FEATURES += "ci textlcd videoenhancement blindscan-dvbs singlecore no-cl-svr 7segment"
+MACHINE_FEATURES += "ci textlcd videoenhancement blindscan-dvbs singlecore 7segment"
+#MACHINE_FEATURES += "no-cl-svr"
 
 IMAGE_FSTYPES ?= "ubi"
 
