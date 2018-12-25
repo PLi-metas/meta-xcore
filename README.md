@@ -1,2 +1,2 @@
 # meta-xcore
-XCore BSP layer for PLi's OE
+XCore BSP layer for Open Vision
