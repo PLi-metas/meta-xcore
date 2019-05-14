@@ -8,6 +8,11 @@ KERNEL_FILE = "kernel.bin"
 DVBPROVIDER = "kernel"
 DVBSKYPROVIDER = "kernel"
 
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
+    rtl8723bs \
+    firmware-rtl8723bs \
+"
+
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
     kernel-module-cdfs \
     ${@bb.utils.contains('MACHINE_FEATURES', 'v3d', 'xcore-v3ddriver-${MACHINE}', '',d)} \
