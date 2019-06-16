@@ -5,13 +5,10 @@ require conf/machine/include/tune-cortexa15.inc
 MTD_BOOTFS = "mmcblk1p1"
 
 SOC_FAMILY = "bcm7439"
+
 require conf/machine/include/soc-family.inc
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 --with-h265 --with-vb6 --with-vb8 --with-vb9 --with-spark"
-
-### 8723BS wireless/bluetooth ###
-KERNEL_MODULE_AUTOLOAD += "r8723bs"
-KERNEL_MODULE_AUTOLOAD += "hci_uart"
 
 IMAGE_FSTYPES ?= "${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'xcore-emmc', 'ubi', d)}"
 
@@ -23,10 +20,6 @@ KERNEL_CONSOLE = "ttyS0,115200n8"
 GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
 require conf/machine/include/xcore-oem.inc
-
-MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
-    kernel-module-hci-uart \
-    "
 
 MACHINE_EXTRA_RRECOMMENDS += "\
     firmware-rtl8723b \
