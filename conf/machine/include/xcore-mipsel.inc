@@ -28,3 +28,5 @@ IMAGE_CMD_ubi_prepend = "\
     rm -rf ${IMAGE_ROOTFS}/boot/*; \
     rm -rf ${IMAGE_ROOTFS}/tmp/*; \
     "
+
+IMAGEDIR = "${MACHINE}"
