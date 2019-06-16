@@ -17,13 +17,12 @@ DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3"
 require conf/machine/include/soc-family.inc
 
 MACHINE_FEATURES += "textlcd videoenhancement"
-#MACHINE_FEATURES += "no-cl-svr"
+
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
+    xcore-dvb-modules-${MACHINE} \
+    "
 
 IMAGE_FSTYPES ?= "ubi"
-
-UBI_VOLNAME = "rootfs"
-MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096 -F"
-UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
 IMAGE_CMD_ubi_prepend = "\
     rm -rf ${IMAGE_ROOTFS}/boot/*; \
