@@ -18,10 +18,6 @@ require conf/machine/include/soc-family.inc
 
 MACHINE_FEATURES += "textlcd videoenhancement osdposition"
 
-MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    xcore-dvb-modules-${MACHINE} \
-    "
-
 IMAGE_FSTYPES ?= "ubi"
 
 IMAGE_CMD_ubi_prepend = "\
