@@ -14,21 +14,19 @@ ROOTFS_FILE = "rootfs.bin"
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3"
 
-SOC_FAMILY = "bcm7358"
 require conf/machine/include/soc-family.inc
 
-PREFERRED_VERSION_linux-xcore = "4.0.2"
+MACHINE_FEATURES += "textlcd videoenhancement osdposition"
 
-MACHINE_FEATURES += "ci textlcd videoenhancement blindscan-dvbs singlecore 7segment"
-#MACHINE_FEATURES += "no-cl-svr"
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
+    xcore-dvb-modules-${MACHINE} \
+    "
 
 IMAGE_FSTYPES ?= "ubi"
-
-UBI_VOLNAME = "rootfs"
-MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096"
-UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
 IMAGE_CMD_ubi_prepend = "\
     rm -rf ${IMAGE_ROOTFS}/boot/*; \
     rm -rf ${IMAGE_ROOTFS}/tmp/*; \
     "
+
+IMAGEDIR = "${MACHINE}"

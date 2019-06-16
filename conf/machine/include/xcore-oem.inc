@@ -34,3 +34,5 @@ MACHINE_FEATURES += "alsa 3dtv switchoff hdmicec"
 #MACHINE_FEATURES += "bootsplash"
 
 BOOTLOGO_FILENAME = "splash.bin"
+
+KERNEL_MODULE_AUTOLOAD += "r8723bs"
