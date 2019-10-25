@@ -4,7 +4,7 @@ LICENSE = "GPLv2"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 SRC = "20170501"
 
-COMPATIBLE_MACHINE = "spycat4k|spycat4kcombo|spycat4kmini|spycat|spycatmini|spycatminiplus"
+COMPATIBLE_MACHINE = "^(spycat4k|spycat4kcombo|spycat4kmini|spycat|spycatmini|spycatminiplus)$"
 
 KERNEL_RELEASE = "4.11"
 
