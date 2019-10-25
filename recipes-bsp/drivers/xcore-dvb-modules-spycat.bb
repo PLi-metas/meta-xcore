@@ -1,6 +1,6 @@
 KV = "4.11.0"
 SRCDATE = "20180207"
-KOFILES = "brcmstb-${MACHINE_DRIVER} ci ftm4862 fts260 sp988x"
+KOFILES = "brcmstb-${MACHINE} ci ftm4862 fts260 sp988x"
 COMPATIBLE_MACHINE = "^(spycat)$"
 require xcore-dvb-modules.inc
 SRC_URI[md5sum] = "fb7fcbd0de27a5600c44434131a3ebef"

@@ -33,7 +33,6 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbc = "xcore-blindscan-utils"
 PREFERRED_PROVIDER_virtual/kernel = "linux-xcore"
 
 MACHINE_FEATURES += "alsa 3dtv switchoff hdmicec"
-#MACHINE_FEATURES += "bootsplash"
 
 BOOTLOGO_FILENAME = "splash.bin"
 
