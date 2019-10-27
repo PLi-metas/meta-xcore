@@ -3,10 +3,10 @@ SECTION = "base"
 PRIORITY = "optional"
 RDEPENDS_${PN} = "ncurses"
 
-PACKAGE_ARCH = "${MACHINE_ARCH}"
-
 LICENSE = "CLOSED"
 require conf/license/license-close.inc
+
+COMPATIBLE_MACHINE = "^(spycat|spycatmini|spycatminiplus)$"
 
 PACKAGES = "xcore-blindscan-dvbs-utils xcore-blindscan-dvbc-utils"
 
