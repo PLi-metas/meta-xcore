@@ -36,7 +36,7 @@ FOURTH_ROOTFS_PARTITION_OFFSET = "$(expr ${FOURTH_KERNEL_PARTITION_OFFSET} \+ ${
 
 SWAP_PARTITION_OFFSET = "$(expr ${FOURTH_ROOTFS_PARTITION_OFFSET} \+ ${ROOTFS_PARTITION_SIZE})"
 
-EMMC_IMAGE = "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.emmc"
+EMMC_IMAGE = "${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.emmc"
 EMMC_IMAGE_SIZE = "3817472"
 
 IMAGE_CMD_xcore-emmc () {
@@ -67,7 +67,7 @@ IMAGE_CMD_xcore-emmc () {
     mcopy -i ${WORKDIR}/boot.img -v ${WORKDIR}/STARTUP_4 ::
     dd conv=notrunc if=${WORKDIR}/boot.img of=${EMMC_IMAGE} bs=${BLOCK_SIZE} seek=$(expr ${IMAGE_ROOTFS_ALIGNMENT} \* ${BLOCK_SECTOR})
     dd conv=notrunc if=${DEPLOY_DIR_IMAGE}/zImage of=${EMMC_IMAGE} bs=${BLOCK_SIZE} seek=$(expr ${KERNEL_PARTITION_OFFSET} \* ${BLOCK_SECTOR})
-    resize2fs ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.ext4 ${ROOTFS_PARTITION_SIZE}k
+    resize2fs ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ext4 ${ROOTFS_PARTITION_SIZE}k
     # Truncate on purpose
-    dd if=${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.ext4 of=${EMMC_IMAGE} bs=${BLOCK_SIZE} seek=$(expr ${ROOTFS_PARTITION_OFFSET} \* ${BLOCK_SECTOR}) count=$(expr ${IMAGE_ROOTFS_SIZE} \* ${BLOCK_SECTOR})
+    dd if=${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ext4 of=${EMMC_IMAGE} bs=${BLOCK_SIZE} seek=$(expr ${ROOTFS_PARTITION_OFFSET} \* ${BLOCK_SECTOR}) count=$(expr ${IMAGE_ROOTFS_SIZE} \* ${BLOCK_SECTOR})
 }
