@@ -4,12 +4,12 @@ IMAGE_TYPEDEP_xcore-emmc = "ext4"
 
 BOOTDD_VOLUME_ID ?= "boot"
 
-IMAGE_DEPENDS_xcore-emmc = " \
-    parted-native \
-    dosfstools-native \
-    mtools-native \
-    virtual/kernel \
-    "
+do_image_xcore-emmc[depends] = " \
+	parted-native:do_populate_sysroot \
+	dosfstools-native:do_populate_sysroot \
+	mtools-native:do_populate_sysroot \
+	virtual/kernel:do_deploy \
+	"
 
 BLOCK_SIZE = "512"
 BLOCK_SECTOR = "2"
