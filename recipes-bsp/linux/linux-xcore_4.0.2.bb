@@ -29,6 +29,7 @@ SRC_URI += "http://source.mynonpublic.com/xcore/linux-brcmstb-${PV}-${SRCDATE}.t
     file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc9.patch \
     file://0001-cp1emu-do-not-use-bools-for-arithmetic.patch \
     file://0002-makefile-disable-warnings.patch \
+    file://0004-log2-give-up-on-gcc-constant-optimizations.patch \
     "
 
 S = "${WORKDIR}/linux-brcmstb-${PV}"
