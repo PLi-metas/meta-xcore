@@ -10,7 +10,7 @@ require conf/machine/include/soc-family.inc
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 --with-h265 --with-vb6 --with-vb8 --with-vb9 --with-spark"
 
-IMAGE_FSTYPES ?= "${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'xcore-emmc', 'ubi', d)}"
+IMAGE_FSTYPES ?= "${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'xcoreemmc', 'ubi', d)}"
 
 MACHINE_FEATURES += "videoenhancement inibt textlcd dvb-c blindscan-tbs linuxwifi linux4extra ci mountboot"
 
@@ -30,7 +30,7 @@ PREFERRED_VERSION_linux-xcore = "4.11"
 IMAGE_CLASSES += "image_types_xcore"
 IMAGE_ROOTFS_SIZE ?= "294912"
 
-IMAGE_CMD_xcore-emmc_append = "\
+IMAGE_CMD_xcoreemmc_append = "\
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
     mv ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.emmc ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/emmc.img; \
     cd ${IMAGE_ROOTFS}; \
