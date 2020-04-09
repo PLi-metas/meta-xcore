@@ -7,9 +7,6 @@ KERNEL_CONSOLE = "ttyS0,115200n8"
 
 require conf/machine/include/xcore-oem.inc
 
-MTD_KERNEL = "mtd2"
-MTD_ROOTFS = "mtd3"
-
 ROOTFS_FILE = "rootfs.bin"
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3"

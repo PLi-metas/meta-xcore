@@ -3,6 +3,7 @@ DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 require conf/machine/include/tune-cortexa15.inc
 
 MTD_BOOTFS = "mmcblk1p1"
+MTD_BLACK  = "mmcblk1"
 
 SOC_FAMILY = "bcm7439"
 
