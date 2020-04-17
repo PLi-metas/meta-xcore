@@ -1,5 +1,5 @@
 # We know about rtc
-require conf/machine/include/build-extras.inc
+MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 BOX_BRAND = "xcore"
 
@@ -25,7 +25,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
     gstreamer1.0-libav \
     "
 
-require conf/machine/include/autoload-filesystems.inc
+KERNEL_MODULE_AUTOLOAD += "xfs"
 
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "xcore-blindscan-utils"
 PREFERRED_PROVIDER_virtual/blindscan-dvbc = "xcore-blindscan-utils"
