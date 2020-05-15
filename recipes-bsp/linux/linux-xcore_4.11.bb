@@ -25,7 +25,7 @@ RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image-${KERNEL_
 
 SRC_URI += "http://source.mynonpublic.com/xcore/xcore-linux-${PV}-${SRC}.tar.gz \
     file://defconfig \
-    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc9.patch \
+    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
     file://noforce_correct_pointer_usage.patch \
     file://TBS-fixes-for-4.11-kernel.patch \
     file://0001-Support-TBS-USB-drivers-for-4.6-kernel.patch \
