@@ -8,7 +8,7 @@ COMPATIBLE_MACHINE = "^(spycat4k|spycat4kcombo|spycat4kmini|spycat|spycatmini|sp
 
 KERNEL_RELEASE = "4.11"
 
-inherit kernel machine_kernel_pr
+inherit kernel machine_kernel_pr samba_change_dialect
 
 SRC_URI[md5sum] = "314b8c61217557f05ea2678313af8a9e"
 SRC_URI[sha256sum] = "b3131a4de50892127eecbeaf869ac5d31e8602473b9cd214c515050ea6825f6e"
