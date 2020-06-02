@@ -10,7 +10,7 @@ DVBSKYPROVIDER = "kernel"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     xcore-dvb-modules-${MACHINE} \
-    rt8723bs \
+    kernel-module-extrawlan-rt8723bs \
     firmware-rtl8723bs \
 "
 
