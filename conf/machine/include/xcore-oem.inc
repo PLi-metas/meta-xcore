@@ -15,7 +15,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 "
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
-    kernel-module-cdfs \
     ${@bb.utils.contains('MACHINE_FEATURES', 'v3d', 'xcore-v3ddriver-${MACHINE}', '',d)} \
     kernel-module-hci-uart \
     "
