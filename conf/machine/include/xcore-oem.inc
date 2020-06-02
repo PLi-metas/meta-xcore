@@ -25,8 +25,6 @@ MACHINE_EXTRA_RRECOMMENDS += "\
     gstreamer1.0-libav \
     "
 
-KERNEL_MODULE_AUTOLOAD += "xfs"
-
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "xcore-blindscan-utils"
 PREFERRED_PROVIDER_virtual/blindscan-dvbc = "xcore-blindscan-utils"
 
@@ -36,6 +34,8 @@ MACHINE_FEATURES += "alsa 3dtv switchoff hdmicec"
 
 BOOTLOGO_FILENAME = "splash.bin"
 
-### 8723BS wireless/bluetooth ###
-KERNEL_MODULE_AUTOLOAD += "r8723bs"
-KERNEL_MODULE_AUTOLOAD += "hci_uart"
+KERNEL_MODULE_AUTOLOAD += "\
+	r8723bs \
+	hci_uart \
+	xfs \
+	"
