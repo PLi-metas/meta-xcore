@@ -13,7 +13,7 @@ DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 -
 
 IMAGE_FSTYPES ?= "${@bb.utils.contains('MACHINE_FEATURES', 'emmc', 'xcoreemmc', 'ubi', d)}"
 
-MACHINE_FEATURES += "videoenhancement inibt textlcd dvb-c blindscan-tbs linuxwifi linux4extra ci mountboot"
+MACHINE_FEATURES += "videoenhancement inibt textlcd dvb-c blindscan-tbs linux4extra ci mountboot"
 
 KERNEL_IMAGETYPE = "zImage"
 KERNEL_CONSOLE = "ttyS0,115200n8"
