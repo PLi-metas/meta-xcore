@@ -45,5 +45,3 @@ IMAGE_CMD_ubi_append = "\
     rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
     rm -Rf ${IMAGEDIR}; \
     "
-
-IMAGEDIR = "${MACHINE}"
