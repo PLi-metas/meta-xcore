@@ -6,8 +6,6 @@ RDEPENDS_${PN} = "ncurses"
 LICENSE = "CLOSED"
 require conf/license/license-close.inc
 
-COMPATIBLE_MACHINE = "^(spycat|spycatmini|spycatminiplus)$"
-
 PACKAGES = "xcore-blindscan-dvbs-utils xcore-blindscan-dvbc-utils"
 
 PROVIDES += "virtual/blindscan-dvbs virtual/blindscan-dvbc"
