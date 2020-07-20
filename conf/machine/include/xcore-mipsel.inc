@@ -24,7 +24,7 @@ DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3"
 
 require conf/machine/include/soc-family.inc
 
-MACHINE_FEATURES += "textlcd videoenhancement osdposition inibt blindscan-dvbc dvb-c blindscan-tbs linux4extra ci tuxtxtclearscreen"
+MACHINE_FEATURES += "videoenhancement osdposition bluetooth blindscan-dvbc dvb-c blindscan-tbs"
 
 IMAGE_FSTYPES ?= "ubi"
 
