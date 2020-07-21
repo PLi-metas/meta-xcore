@@ -72,3 +72,5 @@ IMAGE_CMD_ubi_append = "\
     rm -f ${DEPLOY_DIR_IMAGE}/*.ubifs; \
     rm -Rf ${IMAGEDIR}; \
     "
+
+STB_PLATFORM = "4kspycat"
