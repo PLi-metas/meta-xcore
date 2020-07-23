@@ -48,7 +48,7 @@ KERNEL_IMAGEDEST = "tmp"
 
 FILES_${KERNEL_PACKAGE_NAME}-image = "/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}*  ${@bb.utils.contains('MACHINE_FEATURES', 'emmc', '/${KERNEL_IMAGEDEST}/findkerneldevice.py', '', d)}"
 
-pkg_postinst_kernel-image () {
+pkg_postinst_${KERNEL_PACKAGE_NAME}-image () {
     if [ "x$D" == "x" ]; then
         if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION} ] ; then
             if grep -q 'root=/dev/mmcblk' /proc/cmdline ; then
