@@ -36,5 +36,4 @@ BOOTLOGO_FILENAME = "splash.bin"
 KERNEL_MODULE_AUTOLOAD += "\
 	r8723bs \
 	hci_uart \
-	xfs \
 	"
