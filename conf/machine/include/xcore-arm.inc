@@ -31,7 +31,7 @@ PREFERRED_VERSION_linux-xcore = "4.11"
 IMAGE_CLASSES += "image_types_xcore"
 IMAGE_ROOTFS_SIZE ?= "294912"
 
-IMAGE_CMD_xcoreemmc_append = "\
+IMAGE_CMD_xcoreemmc_append = " \
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
     mv ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.emmc ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/emmc.img; \
     cd ${IMAGE_ROOTFS}; \
@@ -58,7 +58,7 @@ IMAGE_CMD_ubi_prepend = "\
     rm -rf ${IMAGE_ROOTFS}/tmp/*; \
     "
 
-IMAGE_CMD_ubi_append = "\
+IMAGE_CMD_ubi_append = " \
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
     mv ${IMGDEPLOYDIR}/${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.ubi ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${ROOTFS_FILE}; \
     cp ${DEPLOY_DIR_IMAGE}/${KERNEL_IMAGETYPE}-${MACHINE}.bin ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${KERNEL_FILE}; \
