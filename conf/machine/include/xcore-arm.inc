@@ -48,7 +48,6 @@ IMAGE_CMD_xcoreemmc_append = "\
     rm -Rf ${IMAGEDIR}; \
     "
 
-UBI_VOLNAME = "rootfs"
 
 # new 2 GB Flash Model
 MKUBIFS_ARGS = "-m 4096 -e 1040384 -c 2048 -F"

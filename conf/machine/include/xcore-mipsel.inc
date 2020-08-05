@@ -6,7 +6,6 @@ SOC_FAMILY = "bcm7362"
 
 PREFERRED_VERSION_linux-xcore = "4.11"
 
-UBI_VOLNAME = "rootfs"
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096 -F"
 UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
