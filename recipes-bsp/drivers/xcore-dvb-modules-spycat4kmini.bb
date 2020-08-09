@@ -1,4 +1,3 @@
-KV = "4.11.0"
 SRCDATE = "20170907"
 
 KOFILES = "brcmstb-${MACHINE} ci ftm4862 fts260 sp988x fts3166"

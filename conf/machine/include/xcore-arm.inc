@@ -1,3 +1,5 @@
+require conf/machine/include/xcore-oem.inc
+
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 require conf/machine/include/tune-cortexa15.inc
@@ -20,13 +22,9 @@ KERNEL_CONSOLE = "ttyS0,115200n8"
 
 GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
-require conf/machine/include/xcore-oem.inc
-
 MACHINE_EXTRA_RRECOMMENDS += "\
-    firmware-rtl8723b \
-    "
-
-PREFERRED_VERSION_linux-xcore = "4.11"
+	firmware-rtl8723b \
+	"
 
 IMAGE_CLASSES += "image_types_xcore"
 IMAGE_ROOTFS_SIZE ?= "294912"
@@ -47,7 +45,6 @@ IMAGE_CMD_xcoreemmc_append = " \
     rm -f ${DEPLOY_DIR_IMAGE}/*.ext4; \
     rm -Rf ${IMAGEDIR}; \
     "
-
 
 # new 2 GB Flash Model
 MKUBIFS_ARGS = "-m 4096 -e 1040384 -c 2048 -F"
