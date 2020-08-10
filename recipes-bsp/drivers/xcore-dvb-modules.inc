@@ -8,7 +8,6 @@ PACKAGE_ARCH = "${MACHINE}"
 
 RDEPENDS_${PN} += "firmware-mn8847x"
 
-KV = "${KERNELVERSION}"
 
 PV = "${KV}+${SRCDATE}"
 
