@@ -21,9 +21,9 @@ FILES_xcore-blindscan-dvbs-utils = "${bindir}/blindscan"
 FILES_xcore-blindscan-dvbc-utils = "${bindir}/tda1002x"
 
 do_install() {
-    install -d ${D}/${bindir}/
-    install -m 0755 "${S}/tda1002x" "${D}/${bindir}"
-    install -m 0755 "${S}/blindscan" "${D}/${bindir}"
+    install -d ${D}${bindir}/
+    install -m 0755 "${S}/tda1002x" "${D}${bindir}"
+    install -m 0755 "${S}/blindscan" "${D}${bindir}"
 }
 
 do_prepare_recipe_sysroot[noexec] = "1"
