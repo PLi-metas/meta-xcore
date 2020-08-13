@@ -40,3 +40,5 @@ KERNEL_MODULE_AUTOLOAD += "\
 	r8723bs \
 	hci_uart \
 	"
+
+RCNAME = "xcore1"
