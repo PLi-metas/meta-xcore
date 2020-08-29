@@ -22,7 +22,7 @@ KERNEL_CONSOLE = "ttyS0,115200n8"
 
 GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
-MACHINE_EXTRA_RRECOMMENDS += "\
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	firmware-rtl8723b \
 	"
 
