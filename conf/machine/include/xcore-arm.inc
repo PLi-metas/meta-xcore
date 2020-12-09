@@ -54,7 +54,7 @@ IMAGE_CMD_prepend = "\
 MKUBIFS_ARGS = "-m 4096 -e 1040384 -c 2048 -F"
 UBINIZE_ARGS = "-m 4096 -p 1024KiB"
 
-IMAGE_CMD_ubi_prepend = "\
+IMAGE_CMD_ubifs_prepend = "\
 	rm -rf ${IMAGE_ROOTFS}/boot/*; \
 	rm -rf ${IMAGE_ROOTFS}/tmp/*; \
 	"

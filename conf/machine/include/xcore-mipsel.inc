@@ -27,7 +27,7 @@ MACHINE_FEATURES += "videoenhancement osdposition bluetooth blindscan-dvbc dvb-c
 
 IMAGE_FSTYPES ?= "ubi"
 
-IMAGE_CMD_ubi_prepend = "\
+IMAGE_CMD_ubifs_prepend = "\
 	rm -rf ${IMAGE_ROOTFS}/boot/*; \
 	rm -rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
