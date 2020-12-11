@@ -14,7 +14,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	xcore-dvb-modules-${MACHINE} \
 	kernel-module-extrawlan-rt8723bs \
 	firmware-rtl8723bs \
-	${@bb.utils.contains('MACHINE_FEATURES', 'v3d', 'xcore-v3ddriver-${MACHINE}', '',d)} \
 	kernel-module-hci-uart \
 	gstreamer1.0-plugin-dvbmediasink \
 	gstreamer1.0-libav \
