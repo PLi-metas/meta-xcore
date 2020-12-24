@@ -1,10 +1,12 @@
 SUMMARY = "Utilities for transponder & dvb-s/c blindscan"
 SECTION = "base"
 PRIORITY = "optional"
-RDEPENDS_${PN} = "ncurses"
-
 LICENSE = "CLOSED"
 require conf/license/license-close.inc
+
+RDEPENDS_${PN} = "ncurses"
+
+COMPATIBLE_MACHINE = "^(spycat|spycatmini|spycatminiplus)$"
 
 PACKAGES = "xcore-blindscan-dvbs-utils xcore-blindscan-dvbc-utils"
 
@@ -13,7 +15,6 @@ RPROVIDES_xcore-blindscan-dvbs-utils += "virtual/blindscan-dvbs"
 RPROVIDES_xcore-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
 
 SRC_URI = "file://blindscan file://tda1002x"
-
 
 S = "${WORKDIR}"
 
