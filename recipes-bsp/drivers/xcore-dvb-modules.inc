@@ -10,7 +10,7 @@ RDEPENDS_${PN} += "firmware-mn8847x"
 
 PV = "${KV}+${SRCDATE}"
 
-SRC_URI = "http://source.mynonpublic.com/xcore/${MACHINE}-drivers-${KV}-${SRCDATE}.zip"
+SRC_URI = "http://source.mynonpublic.com/xcore/${MACHINE}-drivers-4.11.0-${SRCDATE}.zip"
 
 S = "${WORKDIR}"
 
