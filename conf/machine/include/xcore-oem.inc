@@ -23,7 +23,7 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbs = "xcore-blindscan-utils"
 PREFERRED_PROVIDER_virtual/blindscan-dvbc = "xcore-blindscan-utils"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-xcore"
-PREFERRED_VERSION_linux-xcore = ${KERNELVERSION}"
+PREFERRED_VERSION_linux-xcore = "${KERNELVERSION}"
 
 MACHINE_FEATURES += "alsa switchoff hdmicec HDMI"
 
