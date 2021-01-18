@@ -15,8 +15,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	kernel-module-extrawlan-rt8723bs \
 	firmware-rtl8723bs \
 	kernel-module-hci-uart \
-	gstreamer1.0-plugin-dvbmediasink \
-	gstreamer1.0-libav \
 	"
 
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "xcore-blindscan-utils"
