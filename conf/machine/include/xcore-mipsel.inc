@@ -47,3 +47,8 @@ IMAGE_CMD_ubi_append = " \
 	"
 
 STB_PLATFORM = "mipsspycat"
+
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
+	edision-tuner-edicombo \
+	kernel-module-dvb-usb \
+	"
