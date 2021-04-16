@@ -7,7 +7,6 @@ BOX_BRAND = "xcore"
 
 KERNEL_FILE = "kernel.bin"
 
-DVBSKYPROVIDER = "kernel"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	xcore-dvb-modules-${MACHINE} \
