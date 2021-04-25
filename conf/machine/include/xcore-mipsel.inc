@@ -51,4 +51,5 @@ STB_PLATFORM = "mipsspycat"
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	edision-tuner-edicombo \
 	kernel-module-dvb-usb \
+	kernel-module-extrawlan-rt8723bs \
 	"

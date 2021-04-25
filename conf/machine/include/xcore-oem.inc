@@ -10,8 +10,6 @@ KERNEL_FILE = "kernel.bin"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	xcore-dvb-modules-${MACHINE} \
-	kernel-module-extrawlan-rt8723bs \
-	firmware-rtl8723bs \
 	kernel-module-hci-uart \
 	"
 
